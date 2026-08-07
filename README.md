@@ -21,7 +21,7 @@ Identifying which products, brands, and categories put Sephora's revenue at risk
 
 ## Overview
 
-Sephora's catalog spans 8,200+ products across 9 categories and 300+ brands. Customer ratings and reviews are one of the strongest early signals of product quality — but that signal was sitting unused in raw form. This project builds an end-to-end pipeline: clean the raw product and review data, run SQL analysis to answer specific business questions, validate star ratings against written-review sentiment in Python, and package everything into an interactive Power BI dashboard that a non-technical stakeholder can use without ever touching a query.
+Sephora's catalog spans 8,200+ products across 9 categories and 300+ brands. Customer ratings and reviews are one of the strongest early signals of product quality but that signal was sitting unused in raw form. This project builds an end-to-end pipeline: clean the raw product and review data, run SQL analysis to answer specific business questions, validate star ratings against written-review sentiment in Python, and package everything into an interactive Power BI dashboard that a non-technical stakeholder can use without ever touching a query.
 
 ## Business Problem
 
