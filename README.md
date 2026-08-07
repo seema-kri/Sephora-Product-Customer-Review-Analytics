@@ -132,4 +132,8 @@ Three-page interactive Power BI dashboard, filterable by category, brand, price 
 ## Author & Contact
 
 **Seema Kumari** — Data Analyst
-📧 [email@example.com](mailto:seemakri136@gmail.com) · 💼 [LinkedIn](https://linkedin.com/in/seema-kumari-375763308) 
+
+📧 Email: seemakri136@gmail.com
+💼 LinkedIn: linkedin.com/in/seema-kumari-375763308
+
+⭐ If you found this project useful, consider giving it a star it helps others discover it.
