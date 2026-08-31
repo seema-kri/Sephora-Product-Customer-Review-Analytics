@@ -10,12 +10,12 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 
 | Core Performance Metric | Analyzed Value | Business Rule & Description |
 | :--- | :--- | :--- |
-| **Total Revenue Proxy** | **$192,541,041.10** | Computed via $\text{price\_usd} \times \text{total\_pos\_feedback\_count}$ (BR-04). |
+| **Total Revenue Proxy** | **$192,541,041.10** | Computed via `price_usd * total_pos_feedback_count` (BR-04). |
 | **Total Customer Reviews** | **1,094,411** | 100% matched across partitioned datasets (BR-01, BR-02). |
 | **Active Skincare SKUs** | **2,351** | Cleaned core skincare catalog scope. |
 | **Catalog Average Rating** | **4.30 / 5.00** | Healthy platform-wide baseline customer satisfaction. |
-| **Flagged Attention SKUs** | **44 SKUs** | High-traffic items with rating $< 3.50$ and reviews $> 50$ (BR-07). |
-| **Peak Seasonality Period** | **Q1 (Jan – Mar)** | 329,044 reviews | $55.59M Revenue Share (28.87%) (BR-06). |
+| **Flagged Attention SKUs** | **44 SKUs** | High-traffic items with rating < 3.50 and reviews > 50 (BR-07). |
+| **Peak Seasonality Period** | **Q1 (Jan – Mar)** | 329,044 reviews \| $55.59M Revenue Share (28.87%) (BR-06). |
 
 ---
 
@@ -60,7 +60,7 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 ## 4. Actionable Strategic Recommendations
 
 ### 1. Merchandising & Quality Control
-* **Audit the 44 Flagged SKUs:** Collaborate with vendor partners (Drunk Elephant, Peter Thomas Roth, COOLA) to add explicit application guides (e.g., preventing pilling and white cast) on product pages with $<30\%$ recommendation rates.
+* **Audit the 44 Flagged SKUs:** Collaborate with vendor partners (Drunk Elephant, Peter Thomas Roth, COOLA) to add explicit application guides (e.g., preventing pilling and white cast) on product pages with < 30% recommendation rates.
 * **Reformulate Low-Rated In-House Lines:** Revisit formulas for SEPHORA COLLECTION private-label items rated under 3.00★ (*Clean Lip Balm & Scrub* at 2.28★ and *Cleansing Wipes* at 2.56★) to protect house-brand perception.
 * **Promote High-Satisfaction Indie Brands:** Feature high-performing clean brands like **DAMDAM (4.74★)** and **Dr. Lara Devgan (4.72★)** in discovery sections to diversify catalog revenue.
 
