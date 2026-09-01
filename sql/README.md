@@ -14,7 +14,7 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 | **Total Customer Reviews** | **1,094,411** | 100% matched across partitioned datasets (BR-01, BR-02). |
 | **Active Skincare SKUs** | **2,351** | Cleaned core skincare catalog scope. |
 | **Catalog Average Rating** | **4.30 / 5.00** | Healthy platform-wide baseline customer satisfaction. |
-| **Flagged Attention SKUs** | **44 SKUs** | High-traffic items with rating < 3.50 and reviews > 50 (BR-07). |
+| **Flagged Attention SKUs** | **43 SKUs** | High-traffic items with rating < 3.50 and reviews > 50 (BR-07). |
 | **Peak Seasonality Period** | **Q1 (Jan – Mar)** | 329,044 reviews \| $55.59M Revenue Share (28.87%) (BR-06). |
 
 ---
@@ -32,7 +32,7 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 * **Sentiment Extremes:** Clean clinical brands lead satisfaction (**DAMDAM 4.74★**, **Dr. Lara Devgan 4.72★**), whereas high-volume brands like **NuFACE (3.88★)** and **Topicals (3.66★)** show noticeable customer dissatisfaction relative to their review volume.
 
 ### 3. Product Quality & Attention Watchlist (BR-07)
-* **44 high-traffic SKUs** maintain customer satisfaction scores below **3.50★**.
+* **43 high-traffic SKUs** maintain customer satisfaction scores below **3.50★**.
 * **Mineral Sunscreens:** Physical SPF formulas from Drunk Elephant (*Umbra SPF 30* at 3.31★), COOLA (*Setting Spray SPF 30* at 3.31★), and Supergoop! (*CC Screen Mineral SPF 50* at 3.40★) show recurring complaints regarding white cast and chalky textures.
 * **In-House Brand Vulnerabilities:** Private-label staples like **SEPHORA COLLECTION Clean Lip Balm & Scrub (2.28★, 30.1% rec)** and **Clean Cleansing Wipes (2.56★, 37.8% rec)** rank among the lowest-rated items across the entire catalog.
 
@@ -49,7 +49,7 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 
 | Risk / Opportunity Area | Direct Business Impact |
 | :--- | :--- |
-| **44 Attention SKUs (BR-07)** | Elevated return costs, customer support overhead, and wasted ad spend on low-satisfaction items. |
+| **43 Attention SKUs (BR-07)** | Elevated return costs, customer support overhead, and wasted ad spend on low-satisfaction items. |
 | **Top-Heavy Brand Dependency** | Supplier concentration risk; top 3 brands represent 18.2% of total platform revenue proxy. |
 | **Mineral Sunscreen Sentiment Flaws** | White cast and texture complaints degrade customer retention during spring/summer replenishment cycles. |
 | **Limited Edition Pricing Elasticity** | Under-leveraged margin upside; customers accept a 62% price premium without rating degradation. |
@@ -60,7 +60,7 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 ## 4. Actionable Strategic Recommendations
 
 ### 1. Merchandising & Quality Control
-* **Audit the 44 Flagged SKUs:** Collaborate with vendor partners (Drunk Elephant, Peter Thomas Roth, COOLA) to add explicit application guides (e.g., preventing pilling and white cast) on product pages with < 30% recommendation rates.
+* **Audit the 43 Flagged SKUs:** Collaborate with vendor partners (Drunk Elephant, Peter Thomas Roth, COOLA) to add explicit application guides (e.g., preventing pilling and white cast) on product pages with < 30% recommendation rates.
 * **Reformulate Low-Rated In-House Lines:** Revisit formulas for SEPHORA COLLECTION private-label items rated under 3.00★ (*Clean Lip Balm & Scrub* at 2.28★ and *Cleansing Wipes* at 2.56★) to protect house-brand perception.
 * **Promote High-Satisfaction Indie Brands:** Feature high-performing clean brands like **DAMDAM (4.74★)** and **Dr. Lara Devgan (4.72★)** in discovery sections to diversify catalog revenue.
 
