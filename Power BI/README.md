@@ -1,6 +1,6 @@
 # Power BI Dashboard Deliverables
 
-This directory contains the core Power BI report files and presentation exports for the **sephora-skincare-commercial-analytics** project.
+This directory contains the core Power BI report files and presentation exports for the **Sephora Skincare Commercial & Customer Analytics** project.
 
 ---
 
