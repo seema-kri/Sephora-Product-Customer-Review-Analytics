@@ -1,12 +1,12 @@
-# Sephora Skincare Product & Customer Review Intelligence
+# sephora-skincare-commercial-analytics
 
-An end-to-end SQL analytics project evaluating Sephora's skincare catalog and customer sentiment across **2,351 active SKUs** and **1,094,411 customer reviews** to uncover revenue drivers, inventory risks, quality bottlenecks, and pricing opportunities.
+An end-to-end SQL & Power BI analytics project evaluating Sephora's skincare catalog and customer sentiment across **2,351 active SKUs** and **1,094,411 customer reviews** to uncover revenue drivers, inventory risks, quality bottlenecks, and pricing opportunities.
 
 ---
 
 ## 1. Executive Summary & KPIs
 
-The SQL analysis demonstrates a strong baseline customer satisfaction score of **4.30 / 5.00**, driving **$192.54M in total revenue proxy**. However, granular querying reveals acute portfolio concentration, quality issues among high-volume items, and millions in lost stockout revenue.
+The analysis demonstrates a strong baseline customer satisfaction score of **4.30 / 5.00**, driving **$192.54M in total revenue proxy**. However, granular querying reveals acute portfolio concentration, quality issues among high-volume items, and millions in commercial revenue exposure.
 
 | Core Performance Metric | Analyzed Value | Business Rule & Description |
 | :--- | :--- | :--- |
@@ -22,62 +22,63 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 
 ---
 
-## 2. Core SQL Business Insights
+## 2. Core Business Insights
 
 ### 1. Macro & Sub-Category Performance (BR-05)
-* **Revenue Concentration:** **Moisturizers** and **Treatments** dominate category sales, generating over half of total revenue proxy across 500K+ reviews.
-* **High-Priced Anchor:** **High Tech Tools** delivers outsized revenue contribution relative to its smaller SKU count due to premium unit price points.
-* **Customer Loyalty Spread:** **Treatments** and **Masks** achieve the highest customer advocacy rates, while categories with formulation sensitivity show lower retention.
+* **Revenue Concentration:** **Moisturizers ($61M)** and **Treatments ($48M)** dominate category sales, generating over half of total revenue proxy across 500K+ reviews.
+* **High-Priced Anchor:** **High Tech Tools ($14M)** delivers outsized revenue contribution relative to its smaller SKU count due to premium unit price points.
+* **Customer Loyalty Spread:** **Treatments (77.2%)** and **High Tech Tools (76.6%)** achieve the highest customer advocacy rates, while **Cleansers (66.3%)** exhibit the highest customer churn.
 
 ### 2. Brand Concentration & Vendor Quality (BR-05)
 * **Top 10 Dependency:** The top 10 brands contribute **40.89% ($78.74M)** of overall catalog revenue proxy.
-* **Volume vs. Price Drivers:** **La Mer** leads revenue through luxury unit pricing, whereas **Drunk Elephant** and **Tatcha** scale via high review volume.
-* **Sentiment Extremes:** Top-tier brands maintain ratings above 4.50★, while select high-volume device/treatment brands score below 4.00★.
+* **Volume vs. Price Drivers:** **La Mer ($13.4M)** leads revenue through luxury unit pricing, whereas **Drunk Elephant ($11.6M)** and **Tatcha ($10.1M)** scale via high review volume.
+* **Sentiment Extremes:** Top clinical brands maintain ratings above 4.50★, while select high-volume device/treatment brands show customer dissatisfaction below 4.00★.
 
 ### 3. Product Quality & Attention Watchlist (BR-07)
 * **44 high-traffic SKUs** maintain customer satisfaction scores below **3.50★** with more than 50 customer reviews.
 * **Customer Exposure:** Over **13,321 reviews** and **$6.27M in revenue proxy** are exposed to low satisfaction across these flagged products.
-* **Inventory Intersections:** **5 flagged attention SKUs** are currently out of stock, preventing further customer exposure while requiring formulation/listing review prior to restock.
+* **Inventory Intersections:** **5 flagged attention SKUs** are currently out of stock, preventing further negative customer exposure while requiring formulation and PDP review prior to restock.
 
 ### 4. Pricing Power, Exclusives & Seasonality (BR-06, BR-08)
-* **Limited Edition Elasticity:** Limited-run products command higher average price points ($57.18 vs. $55.58 standard catalog) while sustaining strong customer ratings.
+* **Limited Edition Elasticity:** Limited-run products command higher average price points (**$57.18 vs. $55.58** standard catalog) while sustaining strong customer ratings.
 * **Sephora Exclusives:** Anchor accessible pricing at an average of **$38.24** while driving broad volume across key sub-categories.
-* **Price Tier Performance:** The **Premium Band ($50–$100)** represents the primary catalog revenue driver ($78M proxy), followed by Luxury ($55M) and Mid-Range/Core ($44M).
-* **Quarterly Demand Peak:** Calendar **Q1** captures the highest demand volume (300K+ reviews), followed by a steady normalization through Q2–Q4.
+* **Price Tier Performance:** The **Premium Band ($50–$100)** represents the primary catalog revenue driver (**$78M proxy**), followed by Luxury ($55M) and Core ($44M).
+* **Quarterly Demand Peak:** Calendar **Q1** captures peak demand volume (**329K reviews / $56M revenue proxy**), followed by steady normalization through Q2–Q4.
 
 ---
 
-## 3. Business Impact Assessment
+## 3. Executive Dashboard Suite
 
-| Risk / Opportunity Area | Direct Business Impact |
-| :--- | :--- |
-| **44 Attention SKUs (BR-07)** | **$6.27M in revenue at risk** driving elevated returns and customer churn. |
-| **Top 10 Brand Concentration** | Supplier dependency; top 10 brands control **40.89%** of platform revenue proxy. |
-| **5 OOS Flagged Products** | Stockouts prevent negative review velocity but risk automatic re-order without QA remediation. |
-| **Limited Edition Pricing Elasticity** | Higher price realization ($57.18 avg) without customer rating degradation. |
-| **Premium Price Band Dominance** | **$50–$100 price tier** drives maximum revenue ($78M), validating premium SKU onboarding. |
+### Page 1: Executive Overview
+![Executive Overview](assets/Executive%20Overview.png)
 
----
+### Page 2: Brand Dynamics & Assortment
+![Brand Dynamics & Assortment](assets/Brand%20Dynamics%20%26%20Assortment.png)
 
-## 4. Actionable Strategic Recommendations
-
-### 1. Merchandising & Quality Control
-* **Audit the 44 Flagged Attention SKUs:** Prioritize formulation, packaging, and PDP expectation audits across the 44 products scoring under 3.50★ (protecting **$6.27M** in revenue proxy).
-* **Hold Restock on 5 OOS Flagged Items:** Place an operational procurement hold on the 5 out-of-stock attention SKUs until vendor quality audits are completed.
-* **Target Formula Reviews on Low-Scoring Categories:** Focus vendor quality interventions on low-advocacy lines to bring category recommendation rates up toward the platform 71.10% benchmark.
-
-### 2. Pricing & Assortment Curation
-* **Expand the $50–$100 Premium Assortment:** Focus new product onboarding and vendor partnerships within the **$50–$100 tier**, which generates the largest revenue volume ($78M).
-* **Scale Limited-Edition Product Drops:** Expand high-margin seasonal drops and exclusive bundles leveraging verified pricing power ($57.18 vs. $55.58).
-
-### 3. Inventory & Marketing Operations
-* **Prepare Inventory for Q1 Demand Surge:** Align inventory purchasing and warehouse capacity for peak Q1 review and demand volumes.
-* **Diversify Mid-Tier Brand Partnerships:** Scale emerging brands in the $25–$50 and $50–$100 tiers to mitigate the 40.89% revenue concentration among the top 10 vendor partners.
+### Page 3: Product Attention & Quality
+![Product Attention & Quality](assets/Product%20Attention%20%26%20Quality.png)
 
 ---
 
-## 5. SQL Repository Reference
+## 4. Top 3 Strategic Recommendations
 
-All queries powering this report are structured in the repository files:
-* **`01_data_validation.sql`:** Schema integrity checks, row count validation (2,351 products / 1,094,411 reviews), null handling, and relational mapping.
-* **`02_business_queries.sql`:** Complete implementation of all 13 core business analytics queries (BR-04 through BR-08).
+### 1. Mitigate Quality Risk & Enforce Restock Holds
+* **Action:** Audit the **44 Attention SKUs** scoring below 3.50★ to protect **$6.27M** in exposed revenue proxy.
+* **Immediate Intervention:** Place an immediate procurement hold on the **5 out-of-stock flagged items** until formulation, packaging, and PDP accuracy reviews are completed.
+
+### 2. Capitalize on the $50–$100 Premium Tier & Limited Edition Pricing Power
+* **Action:** Focus new product onboarding and vendor partnerships within the **$50–$100 Premium Tier**, which drives the largest revenue share (**$78M**).
+* **Margin Strategy:** Expand seasonal drops and limited-edition product bundles, leveraging verified pricing elasticity (**$57.18 vs. $55.58**) without risking customer satisfaction.
+
+### 3. De-Risk Brand Concentration & Optimize for Q1 Demand Surge
+* **Action:** Scale emerging mid-tier brands ($25–$50 and $50–$100 bands) to reduce supplier dependency, where the **top 10 brands control 40.89% ($78.74M)** of catalog revenue.
+* **Supply Chain Timing:** Align procurement lead times, marketing budgets, and inventory buffers to prepare for peak **Q1 seasonal demand** (329K reviews / $56M revenue proxy).
+
+---
+
+## 5. Repository Architecture
+
+* **`01_data_validation.sql`:** Schema integrity checks, record count verification (2,351 SKUs / 1,094,411 reviews), null handling, and relational constraints.
+* **`02_business_queries.sql`:** SQL implementation of 13 core business analytics queries (BR-01 through BR-08).
+* **`03_dashboard_kpis_validation.sql`:** Metric audit queries mirroring all Power BI DAX cards 1:1.
+* **`Power BI/Sephora.pbix`:** Interactive 3-page executive reporting suite.
