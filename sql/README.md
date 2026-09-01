@@ -1,6 +1,6 @@
 # Sephora Skincare Product & Customer Review Intelligence
 
-An end-to-end SQL analytics project evaluating Sephora's skincare catalog and customer sentiment across **2,351 SKUs** and **1,094,411 customer reviews** to uncover revenue drivers, inventory risks, quality bottlenecks, and pricing opportunities.
+An end-to-end SQL analytics project evaluating Sephora's skincare catalog and customer sentiment across **2,351 active SKUs** and **1,094,411 customer reviews** to uncover revenue drivers, inventory risks, quality bottlenecks, and pricing opportunities.
 
 ---
 
@@ -14,34 +14,36 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 | **Total Customer Reviews** | **1,094,411** | 100% matched across partitioned datasets (BR-01, BR-02). |
 | **Active Skincare SKUs** | **2,351** | Cleaned core skincare catalog scope. |
 | **Catalog Average Rating** | **4.30 / 5.00** | Healthy platform-wide baseline customer satisfaction. |
-| **Flagged Attention SKUs** | **43 SKUs** | High-traffic items with rating < 3.50 and reviews > 50 (BR-07). |
-| **Peak Seasonality Period** | **Q1 (Jan – Mar)** | 329,044 reviews \| $55.59M Revenue Share (28.87%) (BR-06). |
+| **Catalog Recommendation Rate** | **71.10%** | Baseline customer advocacy across all reviews (BR-05). |
+| **Flagged Attention SKUs** | **44 SKUs** | High-traffic items with rating < 3.50 and reviews > 50 (BR-07). |
+| **Attention SKUs Revenue at Risk** | **$6,272,296.59** | Commercial revenue tied directly to low-satisfaction items. |
+| **Attention SKUs Out of Stock** | **5 SKUs** | Low-rated items currently experiencing unfulfilled stockouts. |
+| **Peak Seasonality Period** | **Q1 (Jan – Mar)** | Leads seasonal review activity and revenue proxy generation (BR-06). |
 
 ---
 
 ## 2. Core SQL Business Insights
 
 ### 1. Macro & Sub-Category Performance (BR-05)
-* **Revenue Concentration:** **Moisturizers ($60.60M, 31.48%)** and **Treatments ($48.38M, 25.13%)** generate **56.61% of total revenue proxy** across 519,000+ reviews.
-* **High-Priced Anchor:** **High Tech Tools** delivers an outsized **$14.00M (7.27%)** across only 76 SKUs due to premium unit pricing.
-* **Customer Loyalty Spread:** **Treatments (77.23%)** and **Self Tanners (76.64%)** achieve the highest repeat advocacy, while **Lip Balms & Treatments (60.09%)** and **Cleansers (66.27%)** exhibit the highest consumer churn.
+* **Revenue Concentration:** **Moisturizers** and **Treatments** dominate category sales, generating over half of total revenue proxy across 500K+ reviews.
+* **High-Priced Anchor:** **High Tech Tools** delivers outsized revenue contribution relative to its smaller SKU count due to premium unit price points.
+* **Customer Loyalty Spread:** **Treatments** and **Masks** achieve the highest customer advocacy rates, while categories with formulation sensitivity show lower retention.
 
 ### 2. Brand Concentration & Vendor Quality (BR-05)
-* **Top 10 Dependency:** The top 10 brands contribute **40.89% ($78.73M)** of overall catalog revenue proxy.
-* **Volume vs. Price Drivers:** **La Mer** leads revenue ($13.37M) via luxury pricing, whereas **Drunk Elephant ($11.63M)** and **Tatcha ($10.06M)** grow through mass volume (>42K reviews each).
-* **Sentiment Extremes:** Clean clinical brands lead satisfaction (**DAMDAM 4.74★**, **Dr. Lara Devgan 4.72★**), whereas high-volume brands like **NuFACE (3.88★)** and **Topicals (3.66★)** show noticeable customer dissatisfaction relative to their review volume.
+* **Top 10 Dependency:** The top 10 brands contribute **40.89% ($78.74M)** of overall catalog revenue proxy.
+* **Volume vs. Price Drivers:** **La Mer** leads revenue through luxury unit pricing, whereas **Drunk Elephant** and **Tatcha** scale via high review volume.
+* **Sentiment Extremes:** Top-tier brands maintain ratings above 4.50★, while select high-volume device/treatment brands score below 4.00★.
 
 ### 3. Product Quality & Attention Watchlist (BR-07)
-* **43 high-traffic SKUs** maintain customer satisfaction scores below **3.50★**.
-* **Mineral Sunscreens:** Physical SPF formulas from Drunk Elephant (*Umbra SPF 30* at 3.31★), COOLA (*Setting Spray SPF 30* at 3.31★), and Supergoop! (*CC Screen Mineral SPF 50* at 3.40★) show recurring complaints regarding white cast and chalky textures.
-* **In-House Brand Vulnerabilities:** Private-label staples like **SEPHORA COLLECTION Clean Lip Balm & Scrub (2.28★, 30.1% rec)** and **Clean Cleansing Wipes (2.56★, 37.8% rec)** rank among the lowest-rated items across the entire catalog.
+* **44 high-traffic SKUs** maintain customer satisfaction scores below **3.50★** with more than 50 customer reviews.
+* **Customer Exposure:** Over **13,321 reviews** and **$6.27M in revenue proxy** are exposed to low satisfaction across these flagged products.
+* **Inventory Intersections:** **5 flagged attention SKUs** are currently out of stock, preventing further customer exposure while requiring formulation/listing review prior to restock.
 
 ### 4. Pricing Power, Exclusives & Seasonality (BR-06, BR-08)
-* **Limited Edition Elasticity:** Limited-run products command a **62.3% price markup** ($78.72 vs. $48.50 average price) while sustaining higher customer ratings (**4.32★ vs. 4.30★**).
-* **Sephora Exclusives:** Drive **$54.31M (28.21% of revenue)** across 701 SKUs at an accessible price point of **$40.35** and **4.29★**.
-* **Price Tier Performance:** The **Premium Tier ($50–$100)** captures the largest revenue share (**39.68%**) and the catalog's highest recommendation rate (**76.57%**).
-* **Discount Inefficiency:** On-sale items account for only **0.30% ($580K)** of revenue proxy and score lower (**4.15★ vs. 4.30★**).
-* **Q1 Post-Holiday Surge:** Calendar **Q1 (Jan–Mar)** leads review activity (**329,044 reviews; $55.59M revenue share**), driven by holiday gift usage and routine resets.
+* **Limited Edition Elasticity:** Limited-run products command higher average price points ($57.18 vs. $55.58 standard catalog) while sustaining strong customer ratings.
+* **Sephora Exclusives:** Anchor accessible pricing at an average of **$38.24** while driving broad volume across key sub-categories.
+* **Price Tier Performance:** The **Premium Band ($50–$100)** represents the primary catalog revenue driver ($78M proxy), followed by Luxury ($55M) and Mid-Range/Core ($44M).
+* **Quarterly Demand Peak:** Calendar **Q1** captures the highest demand volume (300K+ reviews), followed by a steady normalization through Q2–Q4.
 
 ---
 
@@ -49,33 +51,33 @@ The SQL analysis demonstrates a strong baseline customer satisfaction score of *
 
 | Risk / Opportunity Area | Direct Business Impact |
 | :--- | :--- |
-| **43 Attention SKUs (BR-07)** | Elevated return costs, customer support overhead, and wasted ad spend on low-satisfaction items. |
-| **Top-Heavy Brand Dependency** | Supplier concentration risk; top 3 brands represent 18.2% of total platform revenue proxy. |
-| **Mineral Sunscreen Sentiment Flaws** | White cast and texture complaints degrade customer retention during spring/summer replenishment cycles. |
-| **Limited Edition Pricing Elasticity** | Under-leveraged margin upside; customers accept a 62% price premium without rating degradation. |
-| **124 Out-of-Stock SKUs** | **$8.13M** in unfulfilled demand across high-velocity daily staples with 4.25★ customer ratings. |
+| **44 Attention SKUs (BR-07)** | **$6.27M in revenue at risk** driving elevated returns and customer churn. |
+| **Top 10 Brand Concentration** | Supplier dependency; top 10 brands control **40.89%** of platform revenue proxy. |
+| **5 OOS Flagged Products** | Stockouts prevent negative review velocity but risk automatic re-order without QA remediation. |
+| **Limited Edition Pricing Elasticity** | Higher price realization ($57.18 avg) without customer rating degradation. |
+| **Premium Price Band Dominance** | **$50–$100 price tier** drives maximum revenue ($78M), validating premium SKU onboarding. |
 
 ---
 
 ## 4. Actionable Strategic Recommendations
 
 ### 1. Merchandising & Quality Control
-* **Audit the 43 Flagged SKUs:** Collaborate with vendor partners (Drunk Elephant, Peter Thomas Roth, COOLA) to add explicit application guides (e.g., preventing pilling and white cast) on product pages with < 30% recommendation rates.
-* **Reformulate Low-Rated In-House Lines:** Revisit formulas for SEPHORA COLLECTION private-label items rated under 3.00★ (*Clean Lip Balm & Scrub* at 2.28★ and *Cleansing Wipes* at 2.56★) to protect house-brand perception.
-* **Promote High-Satisfaction Indie Brands:** Feature high-performing clean brands like **DAMDAM (4.74★)** and **Dr. Lara Devgan (4.72★)** in discovery sections to diversify catalog revenue.
+* **Audit the 44 Flagged Attention SKUs:** Prioritize formulation, packaging, and PDP expectation audits across the 44 products scoring under 3.50★ (protecting **$6.27M** in revenue proxy).
+* **Hold Restock on 5 OOS Flagged Items:** Place an operational procurement hold on the 5 out-of-stock attention SKUs until vendor quality audits are completed.
+* **Target Formula Reviews on Low-Scoring Categories:** Focus vendor quality interventions on low-advocacy lines to bring category recommendation rates up toward the platform 71.10% benchmark.
 
 ### 2. Pricing & Assortment Curation
-* **Scale Limited-Edition Seasonal Kits:** Expand limited-run holiday and summer bundles priced within the **$50–$100 sweet spot**, where conversion and customer recommendation rates peak (76.57%).
-* **Protect Full-Price Margin Integrity:** Avoid steep clearance markdowns (discounted items account for only 0.30% of sales and score lower at 4.15★); shift promotional spend toward value-add gift packaging.
+* **Expand the $50–$100 Premium Assortment:** Focus new product onboarding and vendor partnerships within the **$50–$100 tier**, which generates the largest revenue volume ($78M).
+* **Scale Limited-Edition Product Drops:** Expand high-margin seasonal drops and exclusive bundles leveraging verified pricing power ($57.18 vs. $55.58).
 
 ### 3. Inventory & Marketing Operations
-* **Restock High-Velocity OOS Items:** Prioritize replenishment on the 124 out-of-stock everyday essentials to reclaim the **$8.13M** in uncaptured demand.
-* **Capitalize on the Q1 Engagement Peak:** Schedule automated review collection prompts, skincare routine guides, and replenishment campaigns throughout January and February.
+* **Prepare Inventory for Q1 Demand Surge:** Align inventory purchasing and warehouse capacity for peak Q1 review and demand volumes.
+* **Diversify Mid-Tier Brand Partnerships:** Scale emerging brands in the $25–$50 and $50–$100 tiers to mitigate the 40.89% revenue concentration among the top 10 vendor partners.
 
 ---
 
 ## 5. SQL Repository Reference
 
 All queries powering this report are structured in the repository files:
-* **`01_data_validation.sql`:** Schema integrity checks, row count validation (2,351 products / 1,094,411 reviews), and primary key mapping.
-* **`02_business_queries.sql`:** Complete implementation of all 13 business analytics queries (BR-04 to BR-08).
+* **`01_data_validation.sql`:** Schema integrity checks, row count validation (2,351 products / 1,094,411 reviews), null handling, and relational mapping.
+* **`02_business_queries.sql`:** Complete implementation of all 13 core business analytics queries (BR-04 through BR-08).
